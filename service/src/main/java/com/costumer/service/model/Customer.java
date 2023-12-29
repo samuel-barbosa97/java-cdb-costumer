@@ -1,6 +1,6 @@
 package com.costumer.service.model;
 
-import com.costumer.service.dto.CostumerDTO;
+import com.costumer.service.dto.CustomerDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Costumer {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,8 +21,8 @@ public class Costumer {
     @Column(nullable = false, unique = true)
     private String email;
 
-    public CostumerDTO toDTO() {
-        CostumerDTO dto = new CostumerDTO();
+    public CustomerDTO toDTO() {
+        CustomerDTO dto = new CustomerDTO();
         dto.setId(this.id);
         dto.setName(this.name);
         dto.setEmail(this.email);

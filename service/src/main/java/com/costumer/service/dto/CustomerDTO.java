@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CostumerDTO {
+public class CustomerDTO {
     private Long id;
     private String name;
     private String email;
